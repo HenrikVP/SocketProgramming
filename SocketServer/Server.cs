@@ -52,7 +52,8 @@ namespace SocketServer
             {
                 allPlayersMadeChoice = true;
                 foreach (var p in players)
-                    if (p.Choice == 0) allPlayersMadeChoice = false;
+                    if (p != null && p.Choice == 0) allPlayersMadeChoice = false;
+                Thread.Sleep(100);
             }
 
             string serverMsg = "";
